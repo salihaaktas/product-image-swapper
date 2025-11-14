@@ -1,27 +1,27 @@
-# 📍 E-Ticaret Ürün Kartı (Resim Değiştirici)
+# 📍 E-Commerce Product Image Swapper
 
-Bu proje, bir e-ticaret sitesi ürün sayfasının temel bir özelliğini simüle eder. Kullanıcı, "Gold" veya "Silver" renk butonlarına tıklayarak ürün görselini anında değiştirebilir.
+This project simulates a key feature of an e-commerce product page: swapping the main product image based on user selection. When the user clicks on a color variant (e.g., "gold" or "silver"), the main image updates to reflect that choice.
 
-Bu proje, `onclick` olaylarını kullanarak DOM'daki bir elementin `src` (kaynak) özelliğini dinamik olarak nasıl güncelleyeceğimizi gösterir.
+This project demonstrates handling `onclick` events to dynamically update the `src` attribute of an `<img>` element.
 
-![Proje Demo GIF'i](demo4.gif)
-*(Demo GIF'i, gold ve silver butonlarına tıklandığında küpe görselinin değiştiğini gösterir)*
+![Project Demo GIF](demo4.gif)
+*(Demo GIF shows the user clicking the "gold" and "silver" buttons, and the earring image changing accordingly)*
 
 ---
 
-### 🛠️ Kullanılan Teknolojiler
+### 🛠️ Technologies Used
 
-* **HTML5:** Ürün kartının ve butonların anlamsal (semantic) yapısı için.
-* **CSS3:** Ürün kartına, resme ve özellikle gold/silver butonlarına modern bir görünüm kazandırmak için (flexbox, box-shadow, border-radius).
+* **HTML5:** For the semantic structure of the product card and buttons.
+* **CSS3:** For styling the product card, image, and the custom "gold" and "silver" buttons (using gradients, box-shadow, and border-radius).
 * **JavaScript (ES6+):**
-    * Görseli seçmek için `getElementById("imageChange")`.
-    * Tıklama olaylarını yönetmek için `onclick` fonksiyonları (`goldChange`, `silverChange`).
-    * `imageShow.src` özelliğini güncelleyerek görseli değiştirmek.
+    * `getElementById("imageChange")` to select the main image element.
+    * `onclick` event handlers (`goldChange()`, `silverChange()`) to trigger the image swap.
+    * Updating the `.src` attribute of the image element to point to a new URL.
 
 ---
 
-### 📖 Bu Projeden Öğrendiklerim
+### 📖 What I Learned from this Project
 
-* DOM'dan belirli bir elementi ID'si ile verimli bir şekilde seçmek.
-* JavaScript fonksiyonlarını kullanarak HTML elementlerinin (`<img>` etiketi) özelliklerini (attributes) değiştirmek.
-* Temiz ve modern bir e-ticaret bileşeni (component) oluşturmak.
+* How to efficiently select a specific DOM element using its ID.
+* How to use JavaScript functions to dynamically change the attributes (like `src`) of an HTML element in response to user events.
+* Building a clean, modern, and reusable component for an e-commerce website.
