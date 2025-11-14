@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+
+body{
+    display: grid;
+    place-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #ffffff;
+}
+
+.card {
+  background: #f4f3f3;
+  border-radius: 16px;
+  padding: 20px 20px ;
+  box-shadow: 0 6px 24px rgba(255, 255, 255, 0.35);
+  width:400px;
+}
+
+.image-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;          /* resim ve butonları yatayda ortala */
+  gap: 16px;                     /* resim ile butonlar arası boşluk */
+}
+
+.image-card:hover h1:hover {
+  opacity: 1;
+}
+.image-card h1{
+  font: 600 14px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #000000;
+  border-radius: 999px;               /* kapsül */
+  backdrop-filter: blur(4px);         /* destekleyen tarayıcılarda cam efekti */
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+  pointer-events: none;               /* tıklamayı engellemez */
+  white-space: nowrap; 
+  font-size:x-large;              
+}
+
+.image-card h1:hover {
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
+.image-card img {
+  display: block;
+  max-width: 70%;
+  width: 500px;
+  height: 350px;                 /* orantıyı koru */
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(255, 255, 255, 0.35);
+}
+
+.color-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.color-buttons button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;           /* yuvarlak */
+  border: 2px solid rgba(255,255,255,.25);
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.35);
+  /* Buton yazısını gizle (ikon gibi dursun); istersen metni bırakabilirsin */
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.color-gold {
+  background: linear-gradient(135deg, #ffd700 0%, #f0b90b 45%, #b8860b 100%);
+  border-color: rgba(255,215,0,.6);
+}
+
+.color-silver {
+  background: linear-gradient(135deg, #d9d9d9 0%, #bfbfbf 50%, #8e8e8e 100%);
+  border-color: rgba(220,220,220,.6);
+}
+
+.color-buttons button:hover {
+  transform: scale(1.06);
+  box-shadow: 0 4px 14px rgba(0,0,0,.45);
+}
+.color-buttons button:focus-visible {
+  outline: 0;
+  border-color: white;
+  box-shadow: 0 0 0 4px rgba(255,255,255,.15);
+}
